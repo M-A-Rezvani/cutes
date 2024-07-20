@@ -66,24 +66,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-html {
-	line-height: 1.15;
-	-webkit-text-size-adjust: 100%;
-}
 
-/* Sections
-	 ========================================================================== */
+@font-face {font-family: Vazirmatn;  src:url(Vazirmatn.woff2);}
 
-/**
- * Remove the margin in all browsers.
- */
-body {
-	margin: 0;
-}
+* {line-height: 1.15;     -webkit-text-size-adjust: 100%;    margin: 0;     font-family: Vazirmatn, sans-serif;}
+main {display: block;}
 
-/**
- * Render the `main` element consistently in IE.
- */
+#site-navigation {font-size: 20px; display: flex;position: sticky;top: 0.3rem;margin: 0.3rem auto;background-color: rgb(0, 255, 0,0.3);opacity: 90%;padding: 10px}
+.main-navigation a {padding: 1px 6px}
+
+a:link,a:visited {color: black;background-color: transparent; transition: all 0.5s;}
+a:hover,a:active {color: rgb(255, 0, 0) ;background-color: transparent; transition: all 0.5s;text-shadow: red 0.2rem 0.2rem 0.2rem;}
+
 main {
 	display: block;
 }
@@ -697,10 +691,11 @@ textarea {
 	text-decoration: none;
 }
 
-/* Small menu. */
+/* Small . */
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+
 }
 
 @media screen and (min-width: 37.5em) {
