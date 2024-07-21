@@ -1,7 +1,7 @@
 /*!
 Theme Name: cutes
 Theme URI: https://underscores.me/
-Author: Automattic
+Author: Automatic
 Author URI: https://automattic.com/
 Description: Hi. I'm a starter theme called <code>cutes</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 Version: 1.0.0
@@ -15,7 +15,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned.
 
-cutes is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+cutes is based on Underscores https://underscores.me/, (C) 2012-2020 Automatic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -72,16 +72,29 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 * {line-height: 1.15;     -webkit-text-size-adjust: 100%;    margin: 0;     font-family: Vazirmatn, sans-serif;}
 main {display: block;}
 
-#site-navigation {font-size: 20px; display: flex;position: sticky;top: 0.3rem;margin: 0.3rem auto;background-color: rgb(0, 255, 0,0.3);opacity: 90%;padding: 10px}
+#site-navigation {font-size: 22px; display: flex;position: sticky;top: 0.3rem;margin: 0 auto;opacity: 90%;padding: 10px;background-color: var(--header);border-radius: 5px}
 .main-navigation a {padding: 1px 6px}
-
+#masthead{background-color: var(--color-2)}
 a:link,a:visited {color: black;background-color: transparent; transition: all 0.5s;}
-a:hover,a:active {color: rgb(255, 0, 0) ;background-color: transparent; transition: all 0.5s;text-shadow: red 0.2rem 0.2rem 0.2rem;}
+a:hover,a:active {color: rgb(41, 41, 41);background-color: transparent; transition: all 0.5s;text-shadow: var(--background-color) 0.2rem 0.2rem 0.2rem;}
+.entry-title{margin: 0}
+body{
+.has-background-dim{background-image: url("ali2.jpg")}
+}
+html{
+	--header: rgba(203, 153, 126, 0.5);
+	--color-2:#DDBEA9;
+	--background-color:#FFE8D6;
+	--color-4:#B7B7A4;
+	--color-5:#A5A58D;
+	--color-6:#6B705C;
+}
 
 main {
 	display: block;
+	background-color: var(--background-color);
 }
-
+.site-title{font-size: 0}
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -129,7 +142,6 @@ a {
  */
 abbr[title] {
 	border-bottom: none;
-	text-decoration: underline;
 	text-decoration: underline dotted;
 }
 
@@ -524,30 +536,7 @@ table {
 	width: 100%;
 }
 
-/* Links
---------------------------------------------- */
-a {
-	color: #4169e1;
-}
 
-a:visited {
-	color: #800080;
-}
-
-a:hover,
-a:focus,
-a:active {
-	color: #191970;
-}
-
-a:focus {
-	outline: thin dotted;
-}
-
-a:hover,
-a:active {
-	outline: 0;
-}
 
 /* Forms
 --------------------------------------------- */
@@ -710,9 +699,9 @@ textarea {
 }
 
 .site-main .comment-navigation,
-.site-main
+.site-main,
 .posts-navigation,
-.site-main
+.site-main,
 .post-navigation {
 	margin: 0 0 1.5em;
 }
