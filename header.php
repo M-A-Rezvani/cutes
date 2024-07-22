@@ -41,7 +41,7 @@
 			$cutes_description = get_bloginfo( 'description', 'display' );
 			if ( $cutes_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $cutes_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<a href="<?php bloginfo("home"); ?>"><p class="site-description"><?php echo $cutes_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p></a>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
