@@ -176,3 +176,22 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+
+
+
+
+
+
+
+
+
+
+function custom_get_site_icon_url() {
+    $site_icon_id = get_option( 'site_icon' );
+    if ( ! empty( $site_icon_id ) ) {
+        $site_icon_url = wp_get_attachment_image_url( $site_icon_id, 'full' );
+        return $site_icon_url;
+    }
+    return '';
+}

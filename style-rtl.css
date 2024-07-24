@@ -94,14 +94,14 @@ main {
 	display: block;
 	background-color: var(--background-color);
 }
-.site-title{font-size: 0}
+/* .site-title{font-size: 10rem} */
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
 	font-size: 2em;
-	margin: 0.67em 0;
+	padding: 0.67em 0;
 }
 
 /* Grouping content
