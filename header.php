@@ -56,7 +56,7 @@
 			</div>
 
 
-
+			<a href="<?php  ?>">login</a>
 			<a href="<?php echo home_url(); ?>"><img src="<?php echo custom_get_site_icon_url(); ?>" class="rounded-circle" style="float: left; width: 3rem;"></a>
 		</div><!-- .site-branding -->
 
@@ -72,5 +72,3 @@
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
-	
-	

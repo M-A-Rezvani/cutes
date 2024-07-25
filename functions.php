@@ -195,3 +195,21 @@ function custom_get_site_icon_url() {
     }
     return '';
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function custom_login_template() {
+    include( get_template_directory() . '/login.php' );
+}
+add_action('template_redirect', 'custom_login_template');
