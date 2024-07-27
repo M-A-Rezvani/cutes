@@ -212,4 +212,4 @@ function custom_get_site_icon_url() {
 function custom_login_template() {
     include( get_template_directory() . '/login.php' );
 }
-add_action('template_redirect', 'custom_login_template');
+//add_action('template_redirect', 'custom_login_template');

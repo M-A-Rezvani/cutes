@@ -15,15 +15,19 @@
 		endif;
 
 		if ( 'post' === get_post_type() ) :
+            if ( is_singular() ) :
 			?>
 			<div class="entry-meta">
+                <p class="entry-meta-date">
 				<?php
 				cutes_posted_on();
-                echo "<br>";
+                echo '</p><br><p class="entry-meta-author" >';
 				cutes_posted_by();
 				?>
+                </p>
 			</div><!-- .entry-meta -->
-		<?php endif; ?>
+		<?php endif;
+            endif; ?>
 	</header><!-- .entry-header -->
 
 	<?php cutes_post_thumbnail(); ?>

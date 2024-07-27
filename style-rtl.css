@@ -90,11 +90,25 @@ html{
 	--color-6:#6B705C;
 }
 
+#post{margin: 100px}
 main {
 	display: block;
 	background-color: var(--background-color);
+	margin: 2rem auto;margin: 2rem;border-radius: 15px;padding: 5px; border: dashed rgba(183,183,164,0.5) 5px;
 }
-/* .site-title{font-size: 10rem} */
+.entry-meta-date{color: red;}
+.site-title{
+	font-size: 2rem;
+	text-align: center;
+}
+
+.site-title a {
+	text-decoration: none;
+}
+
+.site-description {
+	text-align: center;
+}
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -698,13 +712,6 @@ textarea {
 	}
 }
 
-.site-main .comment-navigation,
-.site-main,
-.posts-navigation,
-.site-main,
-.post-navigation {
-	margin: 0 0 1.5em;
-}
 
 .comment-navigation .nav-links,
 .posts-navigation .nav-links,
