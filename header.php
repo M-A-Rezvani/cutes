@@ -81,7 +81,7 @@
 
             <!-- This code is copied from ghasemi theme -> header.php -->
 
-
+            <button class="darkmode" id="darkmode" onclick="darkmode()"><img src="<?php echo get_template_directory_uri();?> sun.svg"></button>
             <button id="myBtn"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                 </svg></button>
@@ -92,8 +92,7 @@
                     <span class="close">&times;</span>
                     <form class="searchform" role="search" method="get"
                           id="searchform" action="<?php echo home_url(); ?>">
-                        <label class="screen-reader-text" for="s">جستجو برای:</label>
-                        <input class="search-bar" type="search" placeholder="کلمه موردن نظرتان را وارد نمایید ..." aria-label="Search"
+                        <input class="search-bar" placeholder="کلمه مورد نظرتان را وارد نمایید ..." aria-label="Search"
                                value="<?php echo $s; ?>" name="s" id="s" required>
                         <button class="search-btn" type="submit" id="searchsubmit"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
