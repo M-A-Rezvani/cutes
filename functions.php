@@ -215,3 +215,60 @@ function custom_login_template() {
     include( get_template_directory() . '/login.php' );
 }
 //add_action('template_redirect', 'custom_login_template');
+
+
+
+
+
+
+function getCustomeWords($string, $start = 0, $end = 10) {
+	// Split the string into individual words
+	$words = explode(' ', $string);
+
+	// Take the first 200 words
+	$customeWords = array_slice($words, $start, $end);
+
+	// Join the words back into a string
+	$result = implode(' ', $customeWords);
+
+	if (str_word_count($result) < str_word_count($string) and $start == 0) {
+		$result = $result . " . . .";
+	}
+
+	return $result;
+}
+
+
+
+
+function get_read_time_by_words_count($text) {
+    // Calculate the number of words in the text
+    $words = str_word_count($text);
+  
+    // Assume an average reading speed of 200 words per minute
+    $reading_speed = 200;
+  
+    // Calculate the read time in seconds
+    $read_time_seconds = round(($words / $reading_speed) * 60); // Convert to seconds
+  
+    // Ensure that the read time is at least 1 second
+    if ($read_time_seconds < 1) {
+        $read_time_seconds = 1;
+    }
+  
+    // Convert the read time to minutes and seconds
+    $read_time_minutes = floor($read_time_seconds / 60);
+    $read_time_seconds = $read_time_seconds % 60;
+  
+    // Return the read time in a human-readable format
+    return "$read_time_minutes minutes and $read_time_seconds seconds";
+}
+
+
+
+
+function reading_time( $content ) {
+	$words_per_minute = 200;
+	$word = count( explode(" ", strip_tags( $content ) ) );
+	return "Reading time: " . ceil($word / $words_per_minute) . " minutes";
+}

@@ -38,22 +38,21 @@
                 <?php
                 if (is_front_page() && is_home()) :
                     ?>
-                    <div class="site-title" title="<?php echo bloginfo('description'); ?>"><a
-                                href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+                    <div class="site-title" title="<?php echo bloginfo('description'); ?>">
+                        <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
                     </div>
                 <?php
                 else :
                     ?>
-                    <p class="site-title" title="<?php echo bloginfo('description'); ?>"><a
-                                href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+                    <p class="site-title" title="<?php echo bloginfo('description'); ?>">
+                        <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
                     </p>
                 <?php
                 endif;
                 ?>
 
 
-                <a href="<?php echo home_url(); ?>"><img src="<?php echo custom_get_site_icon_url(); ?>"
-                                                         class="rounded-circle" style="float: left; width: 3rem;"></a>
+                <a href="<?php echo home_url(); ?>"><img src="<?php echo custom_get_site_icon_url(); ?>" style="float: left; width: 3rem; border-radius: 100%;"></a>
             </div><!-- .site-branding -->
 
 

@@ -34,14 +34,21 @@
 
 	<div class="entry-content">
 		<?php
-		the_content();
+		if ( !is_singular() ) :
+			echo getCustomeWords(get_the_content(), $start = 0, $end = 50);
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'cutes' ),
-				'after'  => '</div>',
-			)
-		);
+		else: 
+			// echo get_read_time_by_words_count(get_the_content());
+			echo reading_time(get_the_content());
+			the_content();
+
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'cutes' ),
+					'after'  => '</div>',
+				)
+			);
+		endif;
 		?>
 	</div><!-- .entry-content -->
 
