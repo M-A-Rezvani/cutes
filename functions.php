@@ -141,6 +141,7 @@ function cutes_scripts() {
 	wp_enqueue_style( 'cutes-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'cutes-style', 'rtl', 'replace' );
 
+
 	wp_enqueue_script( 'cutes-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
     wp_enqueue_script( 'cutes-search', get_template_directory_uri() . '/js/search.js', array(), _S_VERSION, true );
