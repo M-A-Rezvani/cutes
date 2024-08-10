@@ -74,7 +74,7 @@ a:hover, a:active {color: rgb(50, 50, 50);background-color: transparent;transiti
 
 
 /*Site Footer*/
-.site-footer{background-color: var(--blue-color);height: 5rem;display: flex;align-items: center;position: fixed;left: 0;bottom: 0;width: 100%;justify-content: center;}
+.site-footer{background-color: var(--blue-color);height: 5rem;display: flex;align-items: center;left: 0;bottom: 0;width: 100%;justify-content: center;}
 
 
 /*Search Styles*/
@@ -98,7 +98,10 @@ a:hover, a:active {color: rgb(50, 50, 50);background-color: transparent;transiti
 @-webkit-keyframes fadeIn { 0% {opacity: 0;} 100% {opacity: 1;} }
 @keyframes fadeIn { 0% {opacity: 0;} 100% {opacity: 1;} }
 
-
+::-webkit-scrollbar              {width: 0.7rem;height: 0.25rem;background: var(--section-color);}
+::-webkit-scrollbar-thumb        {border-radius: 0.7rem;background: var(--nav-color);transition: all 0.5s ease-in-out;}
+::-webkit-scrollbar-thumb:hover  {background: var(--blue-color);}
+::selection                      {background-color: #fff; color: #000000;}
 
 
 

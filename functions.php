@@ -273,3 +273,337 @@ function reading_time( $content ) {
 	$word = count( explode(" ", strip_tags( $content ) ) );
 	return "Reading time: " . ceil($word / $words_per_minute) . " minutes";
 }
+
+
+
+
+
+
+
+function mihanwpcregister( $wp_customize ) {
+    $wp_customize->add_section( 'logostyle' , array(
+        'title'      => __( 'لوگو و استایل', 'mytheme' ),
+        'priority'   => 1,
+    ) );
+    $wp_customize->add_setting( 'header_textcolor' , array(
+        'default'   => '#000000',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+        'label'      => __( 'Header Color', 'mytheme' ),
+        'section'    => 'logostyle',
+        'settings'   => 'header_textcolor',
+    ) ) );
+
+
+
+
+    $wp_customize->add_setting( 'blogname', array(
+        'default'   => get_bloginfo( 'name' ),
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'blogname', array(
+        'label'    => __( 'Site Title', 'textdomain' ),
+        'section'  => 'logostyle',
+        'settings' => 'blogname',
+        'type'     => 'text',
+    ) );
+
+
+}
+add_action( 'customize_register', 'mihanwpcregister' );
+
+
+
+
+function mihanwpcregister2( $wp_customize ) {
+    $wp_customize->add_section( 'logostyle' , array(
+        'title'      => __( 'لوگو و استایل', 'mytheme' ),
+        'priority'   => 1,
+    ) );
+    $wp_customize->add_setting( 'header_textcolor' , array(
+        'default'   => '#000000',
+        'transport' => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+        'label'      => __( 'Header Color', 'mytheme' ),
+        'section'    => 'logostyle',
+        'settings'   => 'header_textcolor',
+    ) ) );
+
+
+
+
+
+
+    $wp_customize->add_setting( 'blogname', array(
+        'default'   => get_bloginfo( 'name' ),
+        'transport' => 'refresh',
+    ) );
+
+
+
+    $wp_customize->add_setting( 'blogdescription', array(
+        'default'   => get_bloginfo( 'description' ),
+        'transport' => 'refresh',
+    ) );
+
+
+    $wp_customize->add_setting( 'header_image', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+
+
+    $wp_customize->add_setting( 'background_color', array(
+        'default'   => '#ffffff',
+        'transport' => 'refresh',
+    ) );
+
+
+    $wp_customize->add_setting( 'footer_text', array(
+        'default'   => 'Your footer text here',
+        'transport' => 'refresh',
+    ) );
+
+
+    $wp_customize->add_setting( 'custom_logo', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+
+
+    $wp_customize->add_setting( 'link_color', array(
+        'default'   => '#0000ff',
+        'transport' => 'refresh',
+    ) );
+
+
+    $wp_customize->add_setting( 'sidebar_widgets', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+
+
+
+    $wp_customize->add_setting( 'blogname', array(
+        'default'   => get_bloginfo( 'name' ),
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'blogname', array(
+        'label'    => __( 'Site Title', 'textdomain' ),
+        'section'  => 'title_tagline',
+        'settings' => 'blogname',
+        'type'     => 'text',
+    ) );
+
+
+    $wp_customize->add_setting( 'blogdescription', array(
+        'default'   => get_bloginfo( 'description' ),
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'blogdescription', array(
+        'label'    => __( 'Tagline', 'textdomain' ),
+        'section'  => 'title_tagline',
+        'settings' => 'blogdescription',
+        'type'     => 'text',
+    ) );
+
+
+    $wp_customize->add_setting( 'header_image', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'header_image', array(
+        'label'    => __( 'Header Image', 'textdomain' ),
+        'section'  => 'header_image',
+        'settings' => 'header_image',
+    ) ) );
+
+
+    $wp_customize->add_setting( 'background_color', array(
+        'default'   => '#ffffff',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'background_color', array(
+        'label'    => __( 'Background Color', 'textdomain' ),
+        'section'  => 'colors',
+        'settings' => 'background_color',
+    ) ) );
+
+
+    $wp_customize->add_setting( 'footer_text', array(
+        'default'   => 'Your footer text here',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'footer_text', array(
+        'label'    => __( 'Footer Text', 'textdomain' ),
+        'section'  => 'footer_settings',
+        'settings' => 'footer_text',
+        'type'     => 'text',
+    ) );
+
+
+    $wp_customize->add_setting( 'custom_logo', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'custom_logo', array(
+        'label'    => __( 'Custom Logo', 'textdomain' ),
+        'section'  => 'title_tagline',
+        'settings' => 'custom_logo',
+    ) ) );
+
+
+    $wp_customize->add_setting( 'link_color', array(
+        'default'   => '#0000ff',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+        'label'    => __( 'Link Color', 'textdomain' ),
+        'section'  => 'colors',
+        'settings' => 'link_color',
+    ) ) );
+
+
+    $wp_customize->add_setting( 'sidebar_widgets', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'sidebar_widgets', array(
+        'label'    => __( 'Sidebar Widgets', 'textdomain' ),
+        'section'  => 'sidebar_settings',
+        'settings' => 'sidebar_widgets',
+        'type'     => 'textarea',
+    ) );
+
+
+    $wp_customize->add_section( 'section_id', array(
+        'title'    => __( 'Section Title', 'textdomain' ),
+        'priority' => 30, // اولویت نمایش بخش
+    ) );
+
+
+    $wp_customize->add_setting( 'setting_id', array(
+        'default'           => 'Default Value',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
+    ) );
+
+
+
+
+    $wp_customize->add_setting( 'color_setting', array(
+        'default'   => '#000000',
+        'transport' => 'refresh',
+    ) );
+
+
+    $wp_customize->add_setting( 'image_setting', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+
+
+    $wp_customize->add_control( 'setting_id', array(
+        'label'    => __( 'Label', 'textdomain' ),
+        'section'  => 'section_id',
+        'settings' => 'setting_id',
+        'type'     => 'text',
+    ) );
+
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'color_setting', array(
+        'label'    => __( 'Color Setting', 'textdomain' ),
+        'section'  => 'section_id',
+        'settings' => 'color_setting',
+    ) ) );
+
+
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'image_setting', array(
+        'label'    => __( 'Image Setting', 'textdomain' ),
+        'section'  => 'section_id',
+        'settings' => 'image_setting',
+    ) ) );
+
+
+    $wp_customize->add_control( 'select_setting', array(
+        'label'    => __( 'Select Setting', 'textdomain' ),
+        'section'  => 'section_id',
+        'settings' => 'select_setting',
+        'type'     => 'select',
+        'choices'  => array(
+            'option1' => __( 'Option 1', 'textdomain' ),
+            'option2' => __( 'Option 2', 'textdomain' ),
+        ),
+    ) );
+
+
+    $wp_customize->add_control( 'radio_setting', array(
+        'label'    => __( 'Radio Setting', 'textdomain' ),
+        'section'  => 'section_id',
+        'settings' => 'radio_setting',
+        'type'     => 'radio',
+        'choices'  => array(
+            'option1' => __( 'Option 1', 'textdomain' ),
+            'option2' => __( 'Option 2', 'textdomain' ),
+        ),
+    ) );
+
+
+    $wp_customize->add_control( 'checkbox_setting', array(
+        'label'    => __( 'Checkbox Setting', 'textdomain' ),
+        'section'  => 'section_id',
+        'settings' => 'checkbox_setting',
+        'type'     => 'checkbox',
+    ) );
+
+
+    $wp_customize->add_control( 'textarea_setting', array(
+        'label'    => __( 'Textarea Setting', 'textdomain' ),
+        'section'  => 'section_id',
+        'settings' => 'textarea_setting',
+        'type'     => 'textarea',
+    ) );
+
+
+
+}
+add_action( 'customize_register', 'mihanwpcregister2' );
+
+
+
+
+
+
+function my_customizer_settings( $wp_customize ) {
+    // افزودن بخش
+    $wp_customize->add_section( 'my_custom_section', array(
+        'title'    => __( 'My Custom Section', 'textdomain' ),
+        'priority' => 30,
+    ) );
+
+    // افزودن تنظیم
+    $wp_customize->add_setting( 'my_text_setting', array(
+        'default'   => 'Default Text',
+        'transport' => 'refresh',
+    ) );
+
+    // افزودن کنترل
+    $wp_customize->add_control( 'my_text_setting', array(
+        'label'    => __( 'Text Setting', 'textdomain' ),
+        'section'  => 'my_custom_section',
+        'settings' => 'my_text_setting',
+        'type'     => 'text',
+    ) );
+}
+add_action( 'customize_register', 'my_customizer_settings' );
