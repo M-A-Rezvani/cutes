@@ -143,7 +143,6 @@ function cutes_scripts() {
 
 
 	wp_enqueue_script( 'cutes-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
     wp_enqueue_script( 'cutes-search', get_template_directory_uri() . '/js/search.js', array(), _S_VERSION, true );
     wp_enqueue_script( 'cutes-dark-mode', get_template_directory_uri() . '/js/darkmod.js', array(), _S_VERSION, true );
 

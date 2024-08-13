@@ -6,6 +6,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <?php cutes_post_thumbnail(); //post image?>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -27,19 +28,19 @@
                 </p>
 			</div><!-- .entry-meta -->
 		<?php endif;
-            endif; ?>
+            endif;
+        // echo get_read_time_by_words_count(get_the_content());
+        echo reading_time(get_the_content());
+        ?>
 	</header><!-- .entry-header -->
 
-	<?php cutes_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
 		if ( !is_singular() ) :
 			echo getCustomeWords(get_the_content(), $start = 0, $end = 50);
 
-		else: 
-			// echo get_read_time_by_words_count(get_the_content());
-			echo reading_time(get_the_content());
+		else:
 			the_content();
 
 			wp_link_pages(
