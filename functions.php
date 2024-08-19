@@ -270,7 +270,7 @@ function get_read_time_by_words_count($text) {
 function reading_time( $content ) {
 	$words_per_minute = 200;
 	$word = count( explode(" ", strip_tags( $content ) ) );
-	return "Reading time: " . ceil($word / $words_per_minute) . " minutes";
+	return "زمان مطالعه :" . ceil($word / $words_per_minute) . " دقیقه";
 }
 
 
