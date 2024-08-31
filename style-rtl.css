@@ -37,7 +37,7 @@ body{background-color: var(--background-color);}
   --post-color:       #ffffff;
   --section-color:    #b2dbbf;
   --nav-color:        #70c1b3;
-  --blue-color:       #17a9e4;
+  --blue-color:       #6dbfdf;
   --dark-blue-color:  #065ea0;
   --search-bar-color: #202d3c;
   --text-color:       #000000;
@@ -52,8 +52,8 @@ body{background-color: var(--background-color);}
   --post-color:       #060b23;
   --section-color:    #b2dbbf;
   --nav-color:        #70c1b3;
-  --blue-color:       #17a9e4;
-  --dark-blue-color:  #065ea0;
+  --blue-color:       #024e6b;
+  --dark-blue-color:  #004c86;
   --search-bar-color: #202d3c;
   --text-color:       #ffffff;
   --search-color:     #6aff2d;
@@ -69,8 +69,7 @@ a:hover, a:active {color: rgb(50, 50, 50);background-color: transparent;transiti
 
 /*Post styles*/
 .entry-title {margin: 0;color: var(--text-color);text-align: center}
-.post {display: block;background-color: var(--post-color);border-radius: 10px;-webkit-transition: 0.3s;transition: 0.3s;color: var(--text-color);margin: 10px 0; width: 100%;box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);}
-.post {box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);}
+.post {display: block;background-color: var(--post-color);border-radius: 10px;-webkit-transition: 0.3s;transition: 0.3s;color: var(--text-color);margin: 10px 0; width: 100%; box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);}
 .entry-content,.entry-header,.entry-footer{text-align: justify; margin: 0 015px}
 
 
@@ -91,7 +90,8 @@ a:hover, a:active {color: rgb(50, 50, 50);background-color: transparent;transiti
 
 
 /*Footer Styles*/
-.site-footer{background-color: var(--blue-color);height: 8rem;display: flex;align-items: center;left: 0;bottom: 0;width: 100%;justify-content: center;color: var(--text-color);}
+.site-footer{background-color: var(--blue-color);text-align: center;display: flex;align-items: center;left: 0;bottom: 0;width: 100%;justify-content: space-around;color: var(--text-color);}
+.site-follow {display: flex; flex-direction: row; justify-content: stretch;}
 
 
 /*Search Styles*/
@@ -116,15 +116,16 @@ a:hover, a:active {color: rgb(50, 50, 50);background-color: transparent;transiti
 @-webkit-keyframes fadeIn { 0% {opacity: 0;} 100% {opacity: 1;} }
 @keyframes fadeIn { 0% {opacity: 0;} 100% {opacity: 1;} }
 
+/*Fade out animation*/
+.fadeOut {-webkit-animation-name: fadeOut;animation-name: fadeOut;-webkit-animation-duration: 1s;animation-duration: 0.5s;-webkit-animation-fill-mode: both;animation-fill-mode: both;}
+@-webkit-keyframes fadeOut { 0% {opacity: 1;} 100% {opacity: 0;} }
+@keyframes fadeOut { 0% {opacity: 1;} 100% {opacity: 0;} }
 
 /*Scroll Bar*/
-::-webkit-scrollbar              {width: 0.5rem;height: 0.25rem;background: var(--section-color);}
-::-webkit-scrollbar-thumb        {border-radius: 0.7rem;background: var(--nav-color);transition: all 0.5s ease-in-out;}
+::-webkit-scrollbar              {width: 0.7rem;height: 0.25rem;background: var(--section-color);}
+::-webkit-scrollbar-thumb        {border-radius: 0.7rem;background: var(--dark-blue-color);transition: all 0.5s ease-in-out;}
 ::-webkit-scrollbar-thumb:hover  {background: var(--blue-color);}
 ::selection                      {background-color: #fff; color: #000000;}
-
-
-.vl{border-left: 6px solid black;height: 8rem;display: flex;}
 
 
 

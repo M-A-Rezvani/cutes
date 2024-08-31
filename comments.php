@@ -20,20 +20,20 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comments-area" style="border: red 3px solid;">
 
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
 		?>
-		<h2 class="comments-title">
+		<h2 class="comments-title"  style="border: green 3px solid;">
 			<?php
 			$cutes_comment_count = get_comments_number();
 			if ( '1' === $cutes_comment_count ) {
 				printf(
 					/* translators: 1: title. */
 					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'cutes' ),
-					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
+					'<span  style="border: red 3px solid;">' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			} else {
 				printf( 

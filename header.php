@@ -40,16 +40,15 @@
                 <?php
                 else :
                     ?>
-                    <p class="site-title" title="<?php echo bloginfo('description'); ?>">
+                    <div class="site-title" title="<?php echo bloginfo('description'); ?>">
                         <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
-                    </p>
+                    </div>
                 <?php
                 endif;
                 ?>
-
-                <a href="<?php echo home_url(); ?>"><img src="<?php echo custom_get_site_icon_url(); ?>" style="float: left; width: 3rem; border-radius: 100%;"></a>
+ 
             </div><!-- .site-branding -->
-
+            <a href="<?php echo home_url(); ?>"><img src="<?php echo custom_get_site_icon_url(); ?>" style="float: left; width: 3rem; border-radius: 100%;"></a>
 
             <button class="menu-toggle" aria-controls="primary-menu"
                     aria-expanded="false"><?php esc_html_e('Primary Menu', 'cutes'); ?></button>
